@@ -1,5 +1,5 @@
 # #100DaysOfCode Challenge.
 
 ## Contents
-* [Async / Await](async.js)
+* [day 01 - Async / Await](async-await-1.js)
 * [Resources](resources.md)
