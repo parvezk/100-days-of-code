@@ -19,7 +19,7 @@ async load(id: number) {
 }
 
 // Efficient approach
-async load(id: number) {
+async load(id: number, num) {
 
     const [golfers, matchset] = await Promise.all([
         api.getActiveGolfers(),
