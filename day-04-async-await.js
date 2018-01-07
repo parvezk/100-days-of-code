@@ -2,7 +2,7 @@
 
 // Error Handling
 
-// Promise wiht try-catch
+// Promise method with try-catch
 const makeRequest = () => {
 try {
     getJSON()
