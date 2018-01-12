@@ -1,6 +1,7 @@
 //async-await
 
-// In an async function, you can await for any Promise or catch its rejection cause.
+// In an async function, you can await for any 
+// Promise or catch its rejection cause.
 
 // Implementation with promises:
 
