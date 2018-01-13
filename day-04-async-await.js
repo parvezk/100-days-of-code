@@ -21,7 +21,6 @@ try {
 }
 
 // With Async-await
-
 const makeRequest = async () => {
     try {
         // this parse may fail

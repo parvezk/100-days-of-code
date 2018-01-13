@@ -1,4 +1,8 @@
-// Async Await
+/*
+	Async Await:
+	Any async function returns a promise implicitly, and the resolve value of the promise 
+	will return whatever returned 
+*/
 
 const doubleAfter2Sec = (x) => {
 	return new Promise(resolve => {

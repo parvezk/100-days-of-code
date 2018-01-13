@@ -1,6 +1,6 @@
-// Async Await
 
-async getMatchSet(id) {
+// Async Await
+async function getMatchSet(id) {
     try {
         let result = await axios.get('/api/matchset/${id}');
         return result.data;
@@ -11,7 +11,7 @@ async getMatchSet(id) {
 }
 
 // Normal approach
-async load(id: number) {
+async function load(number) {
     let golfers = await api.getActiveGolfers();
     let matchset = await api.getMatchSet(id);
     this.arrangeData(golfers, matchset);
@@ -19,7 +19,7 @@ async load(id: number) {
 }
 
 // Efficient approach
-async load(id: number, num) {
+async function load(number, num) {
 
     const [golfers, matchset] = await Promise.all([
         api.getActiveGolfers(),
