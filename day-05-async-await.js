@@ -4,7 +4,7 @@
     value in the data
 */
 
-// With Promise
+// Anti-pattern (with promise)
 const makeRequest = () => {
     return getJSON()
     .then(data => {
@@ -23,7 +23,6 @@ const makeRequest = () => {
 
 
 // Async-Await
-
 const makeReq = async () => {
     const data = await getJSON();
     if (data.needsAnotherRequest){

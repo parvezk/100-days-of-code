@@ -1,8 +1,17 @@
 // Async await
 
 // Error Handling
+async function getMatchSet(id) {
+    try {
+        let result = await axios.get('/api/matchset/${id}');
+        return result.data;
+    }
+    catch(err) {
+        // ...
+    }
+}
 
-// Promise method with try-catch
+// Anti-pattern; Promise method with try-catch
 const makeRequest = () => {
 try {
     getJSON()
@@ -12,9 +21,9 @@ try {
         console.log(data)
       })
       // uncomment this block to handle asynchronous errors
-      // .catch((err) => {
-      //   console.log(err)
-      // })
+      /* .catch((err) => {
+         console.log(err)
+      })*/
   } catch (err) {
     console.log(err)
   }

@@ -1,29 +1,28 @@
-/*
-	Async Await:
-	Any async function returns a promise implicitly, and the resolve value of the promise 
-	will return whatever returned 
+/* 
+    Async/await 101
+    - Async/await is a new way to write asynchronous code. 
+    - Previous options for asynchronous code are callbacks and promises.
+    - Async/await is, like promises, non blocking.
+    - Async/await is actually built on top of promises
+    - It cannot be used with plain callbacks or node callbacks.
+    - Async/await makes asynchronous code look and behave a little more like synchronous code. This is where all its power lies.
+    - Any async function returns a promise implicitly, and the resolve value of the promise will return whatever returned in that function
 */
 
-const doubleAfter2Sec = (x) => {
-	return new Promise(resolve => {
-    	setTimeout(() => {
-        	resolve(x * 2);
-        }, 2000);
-    });
+// Anti-pattern (with promise)
+const makeRequest = () => 
+    getJSON()
+        .then(data => {
+            console.log(data);
+            return "done"
+        });
+
+makeRequest();
+
+// Async/Await
+const makeReq = async () => {
+    console.log(await getJSON());
+    return "done";
 }
 
-async function addAsync(x) {
-  let sec = 0;
-	const a = doubleAfter2Sec(10);
-	const b = doubleAfter2Sec(20);
-  	const c = doubleAfter2Sec(30);
-  // These async calls run in parallel, like promise.all
-  return {
-  	x: x,
-  	a: await a,
-  	b: await b,
-  	c: await c
-  };
-}
-
-console.log(addAsync(4));
+makeReq();

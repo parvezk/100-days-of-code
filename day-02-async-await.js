@@ -1,14 +1,4 @@
-
 // Async Await
-async function getMatchSet(id) {
-    try {
-        let result = await axios.get('/api/matchset/${id}');
-        return result.data;
-    }
-    catch(err) {
-        // ...
-    }
-}
 
 // Normal approach
 async function load(number) {
